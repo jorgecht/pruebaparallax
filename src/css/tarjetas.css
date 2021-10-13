@@ -1,0 +1,25 @@
+.carta {
+
+    width: 100%;
+    height: calc( 100vh - 50px);
+}
+
+.carta1 {
+  
+    background-color: rgb(252, 147, 62);
+  }
+
+.carta2 {
+
+    background-color: rgb(249, 252, 62);
+}
+
+.carta3 {
+ 
+    background-color: rgb(62, 252, 71);
+}
+
+.carta4 {
+
+    background-color: rgb(62, 252, 195);
+}

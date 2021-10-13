@@ -1,0 +1,62 @@
+.images {
+  padding: 20% 10%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.parallaxImage {
+  display: flex;
+  position: relative;
+  margin: 0;
+  width: 100%;
+  background-color: red;
+
+  color: rgb(29, 22, 95);
+  border-radius: 20px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.parallaxImage2 {
+  display: flex;
+  position: relative;
+  margin: 0;
+  width: 100%;
+  background-color: rgb(174, 197, 44);
+ 
+  color: rgb(29, 22, 95);
+  border-radius: 20px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.centro {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+}
+
+.horizontal {
+  height: 100%;
+  min-width: 300vw;
+  text-align: center;
+  //overflow-y: hidden;
+
+  &:before {
+    content: "← Scroll →";
+  }
+}
+
+.image {
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+}
