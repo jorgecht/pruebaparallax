@@ -37,34 +37,63 @@ import '../css/styles.scss'; */
 
 class SliderImagen extends Component {
 
+    componentDidMount() {
+        window.scrollTo(0, 0)
+    }
+
 
     render() {
         const scrollAxis = "horizontal";
+
+        const amount = 3;
+        const offA = -50;
+        const offB = 50;
+        const elements = new Array(amount * 2 + 1).fill(null).map((x, i) => i);
+
+
+
         return (
 
             <ParallaxProvider scrollAxis={scrollAxis}>
 
                 <div className="horizontal">
                     <div className="centro">
-                        <Parallax
 
-                            x={[-50, 50]}
-                            className="parallax"
-                        >
-                           
-                                
-                                    <div className="parallaxImage">Bloque 1</div>
-                               
-                           
-                            <div className="ratio">
-                                <div className="inner">
-                                    <div className="box">A</div>
-                                </div>
-                            </div>
-                        </Parallax>
-                      
-                        <Parallax
-                            x={[50, -50]}
+                        {elements.map((i) => {
+
+                            const n = i - amount;
+
+                            return (
+                                <Fragment>
+                                    <Parallax
+
+                                        x={[offA * n, offB * n]}
+                                        className="parallax"
+                                    >
+
+
+                                        <div className="parallaxImage2">Unidad {n}</div>
+
+
+                                        <div className="ratio">
+                                            <div className="inner">
+                                                <div className="box">Flota {n}</div>
+                                            </div>
+                                        </div>
+
+                                    </Parallax>
+                                    <div className="espacio"></div>
+                                </Fragment>
+
+                            );
+
+                        }
+                        )
+                        }
+
+
+                        {/* <Parallax
+                            x={[-60, 60]}
                             className="parallax"
 
                         >
@@ -80,7 +109,7 @@ class SliderImagen extends Component {
                                     <div className="box">B</div>
                                 </div>
                             </div>
-                        </Parallax>
+                        </Parallax> */}
                     </div>
                 </div>
 

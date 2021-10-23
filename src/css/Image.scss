@@ -46,9 +46,11 @@
   height: 100%;
   min-width: 300vw;
   text-align: center;
+  background-image: url("../imagenes/gran_espacio.jpg");
   //overflow-y: hidden;
 
   &:before {
+    
     content: "← Scroll →";
   }
 }
