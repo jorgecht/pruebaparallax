@@ -38,7 +38,8 @@ import '../css/styles.scss'; */
 class SliderImagen extends Component {
 
     componentDidMount() {
-        window.scrollTo(0, 0)
+        //window.scrollTo(0, 0);
+        //const { innerWidth: width, innerHeight: height } = window;
     }
 
 
@@ -46,8 +47,8 @@ class SliderImagen extends Component {
         const scrollAxis = "horizontal";
 
         const amount = 3;
-        const offA = -50;
-        const offB = 50;
+        const offA = -110;
+        const offB = 110;
         const elements = new Array(amount * 2 + 1).fill(null).map((x, i) => i);
 
 
