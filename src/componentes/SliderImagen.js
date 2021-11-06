@@ -93,8 +93,8 @@ class SliderImagen extends Component {
         const scrollAxis = "horizontal";
 
         const amount = 3;
-        const offA = -80;
-        const offB = 80;
+        const offA = -60;
+        const offB = 60;
         const elements = new Array(amount * 2 + 1).fill(null).map((x, i) => i);
 
 
