@@ -42,11 +42,25 @@
   flex-flow: column nowrap;
 }
 
+.universo{
+  min-height: 100%;
+  
+  height: auto;
+  position: absolute;
+  
+  //background-size:cover;
+  background-image: url("../imagenes/gran_espacio.jpg"); 
+
+
+}
+
 .horizontal {
-  height: 100%;
-  min-width: 8000px;
+  min-height: 100%;
+  width: 8000px;
+  
+ 
   text-align: center;
-  background-image: url("../imagenes/gran_espacio.jpg");
+  position: relative;
   //overflow-y: hidden;
 
   &:before {

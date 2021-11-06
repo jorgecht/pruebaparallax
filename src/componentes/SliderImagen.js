@@ -1,14 +1,20 @@
 import React, { Fragment } from 'react';
 import { Component } from 'react';
 import { ParallaxProvider } from 'react-scroll-parallax';
-//import "../css/tarjetas.css";
-import ReactDOM from 'react-dom';
+import { useController } from 'react-scroll-parallax';
+
+import { Parallax } from 'react-scroll-parallax';
 import '../css/Image.scss';
 import '../css/prueba.css';
+import ParallaxCache from './ParallaxCache';
+
+//import "../css/tarjetas.css";
+import ReactDOM from 'react-dom';
+
 import styles from '../css/prueba.css';
 import style from '../css/Marquee.scss';
 import Svgani from './Svgani';
-import { Parallax } from 'react-scroll-parallax';
+
 //import boxBg from '../imagenes/box-bg.svg';
 //import boxOutline from '../imagenes/box-outline.svg';
 //import divider from '../imagenes/divider.svg';
@@ -40,60 +46,103 @@ class SliderImagen extends Component {
     componentDidMount() {
         //window.scrollTo(0, 0);
         //const { innerWidth: width, innerHeight: height } = window;
+        //const { parallaxController } = useController();
+        // const handler = () => useController().update();
+        // window.addEventListener('load', handler);
+        // return () => window.removeEventListener('load', handler);
+
+        if (window.screen.width > 390)
+        {
+            document.addEventListener('touchstart', this.touchstart);
+            document.addEventListener('touchmove', this.touchmove);
+    
+            function touchstart(e) {
+                e.preventDefault()
+            }
+    
+            function touchmove(e) {
+                e.preventDefault()
+            }
+        }
+       
+    }
+
+    componentDidUpdate()  {
+
+        if (window.screen.width > 390)
+        {
+            document.addEventListener('touchstart', this.touchstart);
+            document.addEventListener('touchmove', this.touchmove);
+    
+            function touchstart(e) {
+                e.preventDefault()
+            }
+    
+            function touchmove(e) {
+                e.preventDefault()
+            }
+        }
+
     }
 
 
     render() {
+
+
+
         const scrollAxis = "horizontal";
 
         const amount = 3;
-        const offA = -110;
-        const offB = 110;
+        const offA = -80;
+        const offB = 80;
         const elements = new Array(amount * 2 + 1).fill(null).map((x, i) => i);
 
 
 
         return (
 
-            <ParallaxProvider scrollAxis={scrollAxis}>
+            <div className="universo">
 
-                <div className="horizontal">
-                    <div className="centro">
+                <ParallaxProvider scrollAxis={scrollAxis}>
+                    {/* <ParallaxCache></ParallaxCache> */}
 
-                        {elements.map((i) => {
+                    <div className="horizontal">
+                        <div className="centro">
 
-                            const n = i - amount;
+                            {elements.map((i) => {
 
-                            return (
-                                <Fragment>
-                                    <Parallax
+                                const n = i - amount;
 
-                                        x={[offA * n, offB * n]}
-                                        className="parallax"
-                                    >
+                                return (
+                                    <Fragment>
+                                        <Parallax
+
+                                            x={[offA * n, offB * n]}
+                                            className="parallax"
+                                        >
 
 
-                                        <div className="parallaxImage2">Unidad {n}</div>
+                                            <div className="parallaxImage2">Unidad {n}</div>
 
 
-                                        <div className="ratio">
-                                            <div className="inner">
-                                                <div className="box">Flota {n}</div>
+                                            <div className="ratio">
+                                                <div className="inner">
+                                                    <div className="box">Flota {n}</div>
+                                                </div>
                                             </div>
-                                        </div>
 
-                                    </Parallax>
-                                    <div className="espacio"></div>
-                                </Fragment>
+                                        </Parallax>
+                                        <div className="espacio"></div>
+                                    </Fragment>
 
-                            );
+                                );
 
-                        }
-                        )
-                        }
+                            }
+                            )
+                            }
 
 
-                        {/* <Parallax
+                            {/* <Parallax
                             x={[-60, 60]}
                             className="parallax"
 
@@ -111,12 +160,12 @@ class SliderImagen extends Component {
                                 </div>
                             </div>
                         </Parallax> */}
+                        </div>
                     </div>
-                </div>
 
 
-            </ParallaxProvider>
-
+                </ParallaxProvider>
+            </div>
 
             /*  <div className={style.root}>
                  <Divider className={style.divider} />
