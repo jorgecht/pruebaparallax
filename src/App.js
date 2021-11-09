@@ -9,10 +9,10 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 function App() {
   return (
     //<ParallaxProvider scrollAxis="horizontal">
-          //<SliderImagen/>
-          <div className="universo"> 
+          <SliderImagen/>
+          //<div className="universo"> 
 
-          </div>
+          //</div>
     //</ParallaxProvider>
   );
 }
