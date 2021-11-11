@@ -47,10 +47,10 @@
 
 body {
     //background-size:cover;
-    background: url("../imagenes/gran_espacio.jpg") no-repeat center center fixed; 
+    background: url("../imagenes/gran_espacio.jpg"); 
     
-    background-size:cover;
     
+    position: absolute;
 }
 .universo{
   min-height: 100%;
