@@ -103,10 +103,10 @@ class SliderImagen extends Component {
 
             <div className="universo">
 
-                <ParallaxProvider scrollAxis={scrollAxis}>
+                <ParallaxProvider scrollAxis={scrollAxis} className="horizontal">
                     {/* <ParallaxCache></ParallaxCache> */}
 
-                    <div className="horizontal">
+                   
                         <div className="centro">
 
                             {elements.map((i) => {
@@ -161,7 +161,7 @@ class SliderImagen extends Component {
                             </div>
                         </Parallax> */}
                         </div>
-                    </div>
+                    
 
 
                 </ParallaxProvider>
