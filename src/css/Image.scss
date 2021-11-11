@@ -44,6 +44,14 @@
   
 }
 
+
+body {
+    //background-size:cover;
+    background: url("../imagenes/gran_espacio.jpg") no-repeat center center fixed; 
+    
+    background-size:cover;
+    
+}
 .universo{
   min-height: 100%;
   //min-width: 100%;
@@ -54,7 +62,7 @@
   position: absolute;
   
   //background-size:cover;
-  background-image: url("../imagenes/gran_espacio.jpg"); 
+  //background-image: url("../imagenes/gran_espacio.jpg"); 
 
 
 }
