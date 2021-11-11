@@ -43,11 +43,11 @@
 }
 
 .universo{
-  min-height: 100%;
+  height: 100vh;
   //min-width: 100%;
-  width: 8000px;
+  //width: 1000px;
   //height: auto;
-  //width: 100%;
+  width: 100%;
   //height: 100%;
   position: absolute;
   
@@ -60,7 +60,7 @@
 .horizontal {
   //min-height: 100%;
   width: 100%;
-  
+  height: 100%;
  
   text-align: center;
   position: absolute;
