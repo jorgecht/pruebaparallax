@@ -51,37 +51,37 @@ class SliderImagen extends Component {
         // window.addEventListener('load', handler);
         // return () => window.removeEventListener('load', handler);
 
-        if (window.screen.width > 390)
-        {
-            document.addEventListener('touchstart', this.touchstart);
-            document.addEventListener('touchmove', this.touchmove);
+        // if (window.screen.width > 390)
+        // {
+        //     document.addEventListener('touchstart', this.touchstart);
+        //     document.addEventListener('touchmove', this.touchmove);
     
-            function touchstart(e) {
-                e.preventDefault()
-            }
+        //     function touchstart(e) {
+        //         e.preventDefault()
+        //     }
     
-            function touchmove(e) {
-                e.preventDefault()
-            }
-        }
+        //     function touchmove(e) {
+        //         e.preventDefault()
+        //     }
+        // }
        
     }
 
     componentDidUpdate()  {
 
-        if (window.screen.width > 390)
-        {
-            document.addEventListener('touchstart', this.touchstart);
-            document.addEventListener('touchmove', this.touchmove);
+        // if (window.screen.width > 390)
+        // {
+        //     document.addEventListener('touchstart', this.touchstart);
+        //     document.addEventListener('touchmove', this.touchmove);
     
-            function touchstart(e) {
-                e.preventDefault()
-            }
+        //     function touchstart(e) {
+        //         e.preventDefault()
+        //     }
     
-            function touchmove(e) {
-                e.preventDefault()
-            }
-        }
+        //     function touchmove(e) {
+        //         e.preventDefault()
+        //     }
+        // }
 
     }
 
